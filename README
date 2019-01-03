@@ -1,0 +1,2 @@
+To execute test, run 'make test' or 'python -m unittest -v test_sentence'
+
