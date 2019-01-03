@@ -35,6 +35,16 @@ class SentenceTest(unittest.TestCase):
 		self.assertEqual(longest_word_actual, longest_word_expected)
 		self.assertEqual(len(longest_word_actual), len(longest_word_expected))
 
+	def test_one_word(self):
+		word_expected = "sentence"
+		text = "sentence."
+
+		sentence = Sentence(text)
+
+		(word_actual, length) = sentence.get_longest_word()
+		self.assertEqual(word_actual, word_expected)
+		self.assertEqual(len(word_actual), len(word_expected))
+
 	def test_ignores_extra_whitespace(self):
 		longest_word_expected = "antidisestablismentarianism"
 		text = "hello, 		my   name  is      antidisestablismentarianism."
